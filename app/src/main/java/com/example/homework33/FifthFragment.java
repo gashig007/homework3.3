@@ -29,6 +29,5 @@ public class FifthFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         fifth_textview = view.findViewById(R.id.tv_fifth);
         fifth_textview.setText(string);
-
     }
 }
