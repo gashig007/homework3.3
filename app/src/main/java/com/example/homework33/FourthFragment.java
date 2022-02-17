@@ -37,7 +37,7 @@ public class FourthFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Bundle bundle1 = new Bundle();
-                bundle1.putString("text4", fourth_textview.getText().toString());
+                bundle1.putString("text4", string);
                 Fragment fragment = new FifthFragment();
                 fragment.setArguments(bundle1);
                 requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.first_container,

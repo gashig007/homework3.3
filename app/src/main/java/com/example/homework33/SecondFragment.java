@@ -17,7 +17,7 @@ public class SecondFragment extends Fragment {
     private TextView second_textview;
     private Button second_button;
 
-    String string;
+    private String string;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class SecondFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Bundle bundle = new Bundle();
-                bundle.putString("text2", second_textview.getText().toString());
+                bundle.putString("text2", string);
                 Fragment fragment = new ThirdFragment();
                 fragment.setArguments(bundle);
                 requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.first_container,

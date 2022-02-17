@@ -14,11 +14,13 @@ import android.widget.TextView;
 
 public class FifthFragment extends Fragment {
     private TextView fifth_textview;
+    private String string;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        string = getArguments().getString("text4");
         return inflater.inflate(R.layout.fragment_fifth, container, false);
     }
 
@@ -26,8 +28,7 @@ public class FifthFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         fifth_textview = view.findViewById(R.id.tv_fifth);
-        Bundle bundle = getArguments();
-        String text = bundle.getString("text4");
-        fifth_textview.setText(text);
+        fifth_textview.setText(string);
+
     }
 }
